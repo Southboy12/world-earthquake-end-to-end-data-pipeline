@@ -24,7 +24,12 @@ def transform_data(df: pd.DataFrame) -> pd.DataFrame:
     print(f"rows: {len(df)}")
     return df
 
-def write_to_gcs()
+def write_to_local(df: pd.DataFrame) -> Path: 
+    """Write the transformed DataFrame out locally as a parquet file"""
+    path = Path(f"transformed_data/Global_Earthquake_Data.parquet")
+    df.to_parquet(path, compression="gzip")
+    return path
+
    
 
 
@@ -32,9 +37,11 @@ def write_to_gcs()
 def etl_web_to_gcs():
     url = "https://www.kaggle.com/datasets/garrickhague/world-earthquake-data-from-1906-2022/download?datasetVersionNumber=2"
     df = extract_to_local(url)
-    transform_data(df)
+    df_clean = transform_data(df)
+    write_to_local(df_clean)
 
-
+def write_to_gcs():
+    
 
 
 
