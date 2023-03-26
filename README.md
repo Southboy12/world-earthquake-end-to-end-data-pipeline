@@ -1,0 +1,3 @@
+About Dataset
+
+Discover seismic insights with our extensive dataset of earthquakes from around the world. With around 300,000 recorded locations, magnitudes, and depths, this comprehensive collection is a valuable resource for anyone interested in the field. While earlier data may have lower quality, it can still offer useful information. Curated from the USGS website, we present this dataset for your exploration and analysis. Join us in uncovering the hidden patterns and trends that lie within this fascinating data.
